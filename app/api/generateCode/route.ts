@@ -34,7 +34,7 @@ export async function POST(req: Request) {
   let systemPrompt = getSystemPrompt();
 
   let res = await together.chat.completions.create({
-    model: "meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo",
+    model: "meta-llama/Llama-3.2-3B-Instruct-Turbo",
     messages: [
       {
         role: "system",
