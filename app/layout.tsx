@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import PlausibleProvider from "next-plausible";
 import "./globals.css";
 
-let title = "Llama Coder – AI Code Generator";
-let description = "Generate your next app with Llama 3.1 405B";
-let url = "https://llamacoder.io/";
-let ogimage = "https://llamacoder.io/og-image.png";
-let sitename = "llamacoder.io";
+let title = "AltoX – Playground";
+let description = "Generate your next app with Llama 3.2 vision";
+let url = "https://okalobe.com/";
+let sitename = "altox.co";
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
@@ -16,7 +15,6 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   openGraph: {
-    images: [ogimage],
     title,
     description,
     url: url,
@@ -26,7 +24,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    images: [ogimage],
     title,
     description,
   },
@@ -40,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <head>
-        <PlausibleProvider domain="llamacoder.io" />
+        <PlausibleProvider domain="altox.co" />
       </head>
 
       {children}

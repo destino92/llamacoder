@@ -144,23 +144,23 @@ export default function Home() {
       <main className="mt-12 flex w-full flex-1 flex-col items-center px-4 text-center sm:mt-20">
         <a
           className="mb-4 inline-flex h-7 shrink-0 items-center gap-[9px] rounded-[50px] border-[0.5px] border-solid border-[#E6E6E6] bg-[rgba(234,238,255,0.65)] bg-gray-100 px-7 py-5 shadow-[0px_1px_1px_0px_rgba(0,0,0,0.25)]"
-          href="https://dub.sh/together-ai/?utm_source=example-app&utm_medium=llamacoder&utm_campaign=llamacoder-app-signup"
+          href="https://okalobe.com/"
           target="_blank"
         >
           <span className="text-center">
-            Powered by <span className="font-medium">Llama 3.1</span> and{" "}
-            <span className="font-medium">Together AI</span>
+            Empower <span className="font-medium">yourself</span> with{" "}
+            <span className="font-medium">AI</span>
           </span>
         </a>
-        <h1 className="my-6 max-w-3xl text-4xl font-bold text-gray-800 sm:text-6xl">
-          Turn your <span className="text-blue-600">idea</span>
-          <br /> into an <span className="text-blue-600">app</span>
+        <h1 className="my-6 max-w-3xl text-4xl font-bold text-[#242526] sm:text-6xl">
+          Prototype and
+          <br /> Iterate
         </h1>
 
         <form className="w-full max-w-xl" onSubmit={createApp}>
           <fieldset disabled={loading} className="disabled:opacity-75">
             <div className="relative mt-5">
-              <div className="absolute -inset-2 rounded-[32px] bg-gray-300/50" />
+              <div className="absolute -inset-2 rounded-[32px] bg-[#242526]" />
               <div className="relative flex rounded-3xl bg-white shadow-sm">
                 <div className="relative flex flex-grow items-stretch focus-within:z-10">
                   <input
@@ -168,24 +168,24 @@ export default function Home() {
                     value={prompt}
                     onChange={(e) => setPrompt(e.target.value)}
                     name="prompt"
-                    className="w-full rounded-l-3xl bg-transparent px-6 py-5 text-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500"
-                    placeholder="Build me a calculator app..."
+                    className="w-full rounded-l-3xl bg-transparent px-6 py-5 text-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-300"
+                    placeholder="Build me an alarm clock"
                   />
                 </div>
                 <button
                   type="submit"
                   disabled={loading}
-                  className="relative -ml-px inline-flex items-center gap-x-1.5 rounded-r-3xl px-3 py-2 text-sm font-semibold text-blue-500 hover:text-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500 disabled:text-gray-900"
+                  className="relative -ml-px inline-flex items-center gap-x-1.5 rounded-r-3xl px-3 py-2 text-sm font-semibold text-[#242526] hover:text-green-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500 disabled:text-gray-900"
                 >
                   {status === "creating" ? (
-                    <LoadingDots color="black" style="large" />
+                    <LoadingDots color="#242526" style="large" />
                   ) : (
                     <ArrowLongRightIcon className="-ml-0.5 size-6" />
                   )}
                 </button>
               </div>
             </div>
-            <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row sm:items-center sm:gap-8">
+            {/* <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row sm:items-center sm:gap-8">
               <div className="flex items-center justify-between gap-3 sm:justify-center">
                 <p className="text-gray-500 sm:text-xs">Model:</p>
                 <Select.Root
@@ -242,11 +242,11 @@ export default function Home() {
                   <Switch.Thumb className="size-7 rounded-lg bg-gray-200 shadow-[0_1px_2px] shadow-gray-400 transition data-[state=checked]:translate-x-7 data-[state=checked]:bg-white data-[state=checked]:shadow-gray-600" />
                 </Switch.Root>
               </div>
-            </div>
+            </div> */}
           </fieldset>
         </form>
 
-        <hr className="border-1 mb-20 h-px bg-gray-700 dark:bg-gray-700" />
+        <hr className="border-1 mb-20 h-px bg-gray-[#242526] dark:bg-gray-700" />
 
         {status !== "initial" && (
           <motion.div
@@ -265,24 +265,24 @@ export default function Home() {
               <form className="w-full" onSubmit={updateApp}>
                 <fieldset disabled={loading} className="group">
                   <div className="relative">
-                    <div className="relative flex rounded-3xl bg-white shadow-sm group-disabled:bg-gray-50">
+                    <div className="relative flex rounded-3xl bg-[#242526] shadow-sm group-disabled:bg-gray-50">
                       <div className="relative flex flex-grow items-stretch focus-within:z-10">
                         <input
                           required
                           name="modification"
                           value={modification}
                           onChange={(e) => setModification(e.target.value)}
-                          className="w-full rounded-l-3xl bg-transparent px-6 py-5 text-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500 disabled:cursor-not-allowed"
+                          className="w-full rounded-l-3xl bg-transparent text-white px-6 py-5 text-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-300 disabled:cursor-not-allowed"
                           placeholder="Make changes to your app here"
                         />
                       </div>
                       <button
                         type="submit"
                         disabled={loading}
-                        className="relative -ml-px inline-flex items-center gap-x-1.5 rounded-r-3xl px-3 py-2 text-sm font-semibold text-blue-500 hover:text-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500 disabled:text-gray-900"
+                        className="relative -ml-px inline-flex items-center gap-x-1.5 rounded-r-3xl px-3 py-2 text-sm font-semibold text-blue-[#242526] hover:text-green-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-300 disabled:text-gray-300"
                       >
                         {loading ? (
-                          <LoadingDots color="black" style="large" />
+                          <LoadingDots color="#242526" style="large" />
                         ) : (
                           <ArrowLongRightIcon className="-ml-0.5 size-6" />
                         )}
@@ -316,13 +316,13 @@ export default function Home() {
                           );
                           setIsPublishing(false);
                           toast.success(
-                            `Your app has been published & copied to your clipboard! llamacoder.io/share/${appId}`,
+                            `Your app has been published & copied to your clipboard! altox.co/share/${appId}`,
                           );
                           navigator.clipboard.writeText(
                             `${domain}/share/${appId}`,
                           );
                         }}
-                        className="inline-flex h-[68px] w-40 items-center justify-center gap-2 rounded-3xl bg-blue-500 transition enabled:hover:bg-blue-600 disabled:grayscale"
+                        className="inline-flex h-[68px] w-40 items-center justify-center gap-2 rounded-3xl bg-[#242526] transition enabled:hover:bg-green-300 disabled:grayscale"
                       >
                         <span className="relative">
                           {isPublishing && (
@@ -385,7 +385,7 @@ export default function Home() {
           </motion.div>
         )}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
