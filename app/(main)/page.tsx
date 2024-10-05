@@ -24,10 +24,6 @@ export default function Home() {
   let [prompt, setPrompt] = useState("");
   let models = [
     {
-      label: "Llama 3.1 405B",
-      value: "meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo",
-    },
-    {
       label: "Llama 3.1 70B",
       value: "meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
     },
@@ -185,7 +181,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            {/* <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row sm:items-center sm:gap-8">
+            <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row sm:items-center sm:gap-8">
               <div className="flex items-center justify-between gap-3 sm:justify-center">
                 <p className="text-gray-500 sm:text-xs">Model:</p>
                 <Select.Root
@@ -228,7 +224,7 @@ export default function Home() {
                 </Select.Root>
               </div>
 
-              <div className="flex h-full items-center justify-between gap-3 sm:justify-center">
+              {/* <div className="flex h-full items-center justify-between gap-3 sm:justify-center">
                 <label className="text-gray-500 sm:text-xs" htmlFor="shadcn">
                   shadcn/ui:
                 </label>
@@ -241,8 +237,8 @@ export default function Home() {
                 >
                   <Switch.Thumb className="size-7 rounded-lg bg-gray-200 shadow-[0_1px_2px] shadow-gray-400 transition data-[state=checked]:translate-x-7 data-[state=checked]:bg-white data-[state=checked]:shadow-gray-600" />
                 </Switch.Root>
-              </div>
-            </div> */}
+              </div> */}
+            </div>
           </fieldset>
         </form>
 
@@ -291,7 +287,7 @@ export default function Home() {
                   </div>
                 </fieldset>
               </form>
-              <div>
+              {/* <div>
                 <Toaster invert={true} />
                 <Tooltip.Provider>
                   <Tooltip.Root>
@@ -352,7 +348,7 @@ export default function Home() {
                     </Tooltip.Portal>
                   </Tooltip.Root>
                 </Tooltip.Provider>
-              </div>
+              </div> */}
             </div>
             <div className="relative mt-8 w-full overflow-hidden">
               <div className="isolate">
